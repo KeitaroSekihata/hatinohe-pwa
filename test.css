@@ -1,0 +1,81 @@
+/* ヘッダー */
+header {
+ background-color: #1e4fa3;
+ color: white;
+}
+
+
+/* フッター */
+footer {
+ text-align: center;
+ background-color: black;
+ color: white;
+}
+
+
+/* フッターの要素の区切り */
+footer p {
+ border-top: 1px solid white;
+}
+
+
+/* 質問文と選択肢 */
+legend {
+ border: 1px solid gray;
+ border-radius: 5px;
+}
+
+/*タイトルのボックス*/
+div.questionbox {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/*結果画面の画像と説明を横並びにする*/
+div.imagebox {
+    display: flex;
+}
+
+div.choices {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 選択肢の間のパディングを0 */
+div.choice {
+ padding: 0;
+}
+
+
+/* 選択肢のラベルの先頭に「○ 」 */
+label.radio-btn::before {
+ content: "○ ";
+}
+
+
+/* チェックした選択肢のラベルの先頭に「◉ 」 */
+input[type="radio"]:checked + label.radio-btn::before {
+ content: "◉ ";
+}
+
+
+/* ラベルを拡げてサイズ調整 */
+label {
+ width: 100%;
+ height: 100%;
+}
+
+
+/* submitボタンを拡げてサイズ調整 */
+input[type="submit"] {
+ width: 100%;
+ height: 100%;
+}
+
+#result{
+    display: none;
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>はちのへ先人診断</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="test.css">
+  <link rel="manifest" href="mf.json">
+  <link rel="shortcuticon" href="/favicon.ico">
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg sticky-top">
+    <h1>はちのへ先人診断</h1>
+  </header>
+
+
+  <div class="titlebox">
+    <div class="questionbox text-center">
+      <div class="questiontext-back">
+        <h1 id="qtext" value="0">
+          10個の質問に答えよう
+        </h1>
+      </div>
+    </div>
+    <div class="choices">
+      <a href="question.html" class="btn btn-primary btn-big">始める</a>
+    </div>
+  </div>
+
+  <footer class="sticky-bottom mt-3">
+    <p class="pt-3">
+      <a href="#" class="text-decoration-none text-white fs-4">
+        ご質問お問い合わせなど
+      </a>
+    </p>
+    <p class="py-3">
+      <a href="#" class="text-decoration-none text-white fs-4">
+        八戸市博物館・八戸工業大学
+      </a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
+</body>
+
+</html>
